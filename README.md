@@ -53,6 +53,3 @@
 ## Project Summary
 
 The Hotel Management System's Room Controller is responsible for handling requests related to hotel rooms. It provides endpoints for retrieving all existing rooms and adding a new room to the system. The controller is built using Java and Spring Boot, employing Spring Web for creating RESTful APIs. Data flow involves interactions between the Controller and the Service layer, where the RoomService performs operations on the data (e.g., retrieving and adding rooms). The project's data structure is centered around the `HotelRoom` class/model, which likely contains essential information about the hotel rooms.
-
----
-*Note: The information provided in this README file is based on the code snippet shared earlier. It may require further updates and elaboration depending on the actual implementation and requirements of the Hotel Management System.*
