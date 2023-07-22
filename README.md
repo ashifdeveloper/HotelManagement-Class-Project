@@ -107,7 +107,7 @@ spring.jpa.properties.hibernate.format_sql=true
 
 
 ## DataBase Used
-* SQL database
+* H2 database
 ```
 We have used Persistent database to implement CRUD Operations.
 ```
