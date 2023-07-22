@@ -32,26 +32,31 @@ The following dependencies are required to run the project:
 * Spring Boot Dev Tools
 * Spring Web
 * Spring Data JPA
-* MySQL Driver
+* H2 Database
 * Lombok
 * Validation
-* Swagger
 
 <br>
 
 ## Database Configuration
-By adding the correct database URL, user name, and password to the application.properties file, you can connect to a MySQL database. It's time to update the following properties:
+By adding the correct database URL, user name, and password to the application.properties file, you can connect to a H2 database. It's time to update the following properties:
 ```
-spring.datasource.driverClassName=com.mysql.cj.jdbc.Driver
-spring.datasource.url = jdbc:mysql://localhost:3306/<DatabaseName>
-spring.datasource.username = <userName>
-spring.datasource.password = <password>
-spring.jpa.show-sql = true
-spring.jpa.hibernate.ddl-auto = update
+spring.datasource.url=jdbc:h2:mem:<database nama>
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=<user name>
+spring.datasource.password=<password>
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.h2.console.enabled=true
+
+
 
 spring.jpa.properties.hibernate.show_sql=true
 spring.jpa.properties.hibernate.use_sql_comments=true
 spring.jpa.properties.hibernate.format_sql=true
+
+
+#EnableH2Console-http://localhost:8080/h2-console
+
 
 ```
 <br>
@@ -97,9 +102,6 @@ spring.jpa.properties.hibernate.format_sql=true
   - Input: `HotelRoom` object representing the new room.
   - Output: A string indicating the result of the room addition process.
 
-### 3. Repository
-
-- No specific functions mentioned in the provided code snippet.
 
 ### 4. Database Design
 
